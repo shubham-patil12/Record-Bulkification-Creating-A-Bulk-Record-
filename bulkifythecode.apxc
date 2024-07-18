@@ -1,0 +1,13 @@
+List<Contact> conlist = new List<Contact>();
+      for(integer i=1;i<=300;i++){
+         contact con = new Contact();
+            con.LastName='SFDC134'+i;
+               con.Department='Sales'+i;
+               con.Phone='8867645675'+i;
+            conlist.add(con);
+          }
+       if(!conlist.isEmpty()){
+     insert conlist;
+   for(contact cs:conlist)
+ system.debug('Contact Bulk Record Created: '+conlist);
+ }
